@@ -16,13 +16,13 @@ class UserstableSeeder extends Seeder
             'password' => bcrypt('qwerty@admin.in'),
             'email' => 'prkjha25@gmail.com',
             'admin' => 1,
-            'avatar' => asset('avatars/avatar.png')
+            'avatar' => 'avatars/avatar.png'
         ]);
         App\User::create([
             'name' => 'Emily Myers',
             'password' => bcrypt('password'),
             'email' => 'emily@myers.com',
-            'avatar' => asset('avatars/avatar.png')
+            'avatar' => 'avatars/avatar.png'
         ]);
     }
 }

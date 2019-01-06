@@ -1,6 +1,7 @@
 <?php
 
 namespace App;
+use Auth;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -13,13 +14,13 @@ class Discussion extends Model
        return $this->belongsTo('App\Channel');
    }
 
-   public function user()
-   {
-       return $this->belongsTo('App\User');
-   }
+    public function user()
+    {
+        return $this->belongsTo('App\User');
+    }
 
    public function replies()
-   {
+    {
        return $this->hasMany('App\Reply');
-   }
+    }
 }
