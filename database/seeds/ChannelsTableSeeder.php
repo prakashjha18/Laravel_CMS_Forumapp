@@ -1,8 +1,6 @@
 <?php
-
-use Illuminate\Database\Seeder;
 use App\Channel;
-
+use Illuminate\Database\Seeder;
 class ChannelsTableSeeder extends Seeder
 {
     /**
@@ -12,15 +10,14 @@ class ChannelsTableSeeder extends Seeder
      */
     public function run()
     {
-        $channel1 =['title' => 'Applies maths'];
-        $channel2 =['title' => 'Computer Networks'];
-        $channel3 =['title' => 'Operating Systems'];
-        $channel4 =['title' => 'Computer Architecture'];
-        $channel5 =['title' => 'Automata Theory'];
-        $channel6 =['title' => 'Networking Lab'];
-        $channel7 =['title' => 'Unix lab'];
-        $channel8 =['title' => 'Mcroprocessor lab'];
-        $channel9 =['title' => 'Python lab'];
+        $channel1 = ['title' => 'Laravel' ];
+        $channel2 = ['title' => 'Vuejs'];
+        $channel3 = ['title' => 'Javascript'];
+        $channel4 = ['title' => 'CSS3' ];
+        $channel5 = ['title' => 'PHP Testing'];
+        $channel6 = ['title' => 'Spark'];
+        $channel7 = ['title' => 'Lumen'];
+        $channel8 = ['title' => 'Forge'];
         Channel::create($channel1);
         Channel::create($channel2);
         Channel::create($channel3);
@@ -29,6 +26,5 @@ class ChannelsTableSeeder extends Seeder
         Channel::create($channel6);
         Channel::create($channel7);
         Channel::create($channel8);
-        Channel::create($channel9);
     }
 }
