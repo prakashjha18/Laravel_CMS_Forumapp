@@ -14,6 +14,9 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/discuss', function () {
+    return view('discuss');
+});
 
 Auth::routes();
 
