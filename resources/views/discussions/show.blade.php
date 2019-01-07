@@ -38,9 +38,9 @@
         </div>
         <div class="panel-footer">
             @if($r->is_liked_by_auth_user())
-                <a href="{{route('reply.unlike',['id' => $r->id])}}" class="btn btn-danger btn-xs">Unlike</a>
+                <a href="{{route('reply.unlike',['id' => $r->id])}}" class="btn btn-danger btn-xs">Unlike <span class="badge">{{$r->likes->count()}}</span></a>
             @else
-                <a href="{{route('reply.like',['id' => $r->id])}}" class="btn btn-success btn-xs">Like</a>
+                <a href="{{route('reply.like',['id' => $r->id])}}" class="btn btn-success btn-xs">Like <span class="badge">{{$r->likes->count()}}</span></a>
             @endif
         </div>
     </div>
