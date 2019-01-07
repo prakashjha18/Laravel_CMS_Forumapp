@@ -75,6 +75,15 @@
                 <a href="{{route('discussions.create')}}" class="form-control btn btn-primary">Create a new discussion</a>
                 <br><br>
                 <div class="panel panel-default">
+                    <div class="panel-body">
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                <a href="/forum">Home</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="panel panel-default">
                     <div class="panel-heading">
                         Channels
                     </div>

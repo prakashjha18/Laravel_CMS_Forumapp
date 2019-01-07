@@ -47,16 +47,22 @@
     @endforeach
     <div class="panel panel-default">
         <div class="panel-body">
-            <form action = "{{route('discussion.reply',['id' => $d->id])}}" method="post">
-                {{csrf_field()}}
-                <div class="form-group">
-                    <label for="reply">Leave a reply....</label>
-                    <textarea name="reply" id="reply" cols="30" rows="10" class="form-control"></textarea>
+            @if(Auth::check())
+                <form action = "{{route('discussion.reply',['id' => $d->id])}}" method="post">
+                    {{csrf_field()}}
+                    <div class="form-group">
+                        <label for="reply">Leave a reply....</label>
+                        <textarea name="reply" id="reply" cols="30" rows="10" class="form-control"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <button class="btn pull-right">Leave a reply</button>
+                    </div>
+                </form>
+            @else
+                <div class="text-center">
+                    <h2>Sign in to leave a reply</h2>
                 </div>
-                <div class="form-group">
-                    <button class="btn pull-right">Leave a reply</button>
-                </div>
-            </form>
+            @endif
         </div>
     </div>
 @endsection
