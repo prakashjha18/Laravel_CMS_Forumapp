@@ -36,7 +36,8 @@ class ChannelsController extends Controller
     public function store(Request $request)
     {
         $this->validate($request,[
-            'channel' => 'required'
+            'channel' => 'required',
+            'slug' =>str_slug($request->channel)
         ]);
 
         Channel::create([
@@ -82,6 +83,7 @@ class ChannelsController extends Controller
     {
         $channel = Channel::find($id);
         $channel->title = $request->channel;
+        $channel->slug = str_slug($request->channel);
         $channel->save();
         Session::flash('success','Channel edited successfully');
         return redirect()->route('channels.index');

@@ -14,7 +14,7 @@ class UserstableSeeder extends Seeder
         App\User::create([
             'name' => 'admin',
             'password' => bcrypt('qwerty@admin.in'),
-            'email' => 'prkjha25@gmail.com',
+            'email' => 'pjha25@gmail.com',
             'admin' => 1,
             'avatar' => 'avatars/avatar.png'
         ]);
