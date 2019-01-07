@@ -37,9 +37,11 @@
             <hr>
         </div>
         <div class="panel-footer">
-            <p>
-                LIKE
-            </p>
+            @if($r->is_liked_by_auth_user())
+                <a href="" class="btn btn-danger btn-xs">Unlike</a>
+            @else
+                <a href="" class="btn btn-success btn-xs">Like</a>
+            @endif
         </div>
     </div>
     @endforeach
