@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\Discussion;
 use App\Reply;
 use App\User;
+use Notification;
 use Auth;
 use Session;
 use Illuminate\Http\Request;
@@ -50,6 +51,7 @@ class DiscussionsController extends Controller
         foreach($d->watchers as $watcher):
             array_push($watchers,User::find($watcher->user_id));
         endforeach;
+        Notification::send($watchers, new \App\Notifications\NewReplyAdded($d));
         Session::flash('success','Replied to discussion.');
         return redirect()->back();
     }
