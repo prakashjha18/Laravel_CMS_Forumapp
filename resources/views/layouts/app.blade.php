@@ -93,6 +93,15 @@
                             <li class="list-group-item">
                                 <a href="/forum">Home</a>
                             </li>
+                            <li class="list-group-item">
+                                <a href="/forum?filter=me">My discussion</a>
+                            </li>
+                            <li class="list-group-item">
+                                <a href="/forum?filter=solved">Answered discussion</a>
+                            </li>
+                            <li class="list-group-item">
+                                <a href="/forum?filter=unsolved">UnAnswered discussion</a>
+                            </li>
                         </ul>
                     </div>
                 </div>
