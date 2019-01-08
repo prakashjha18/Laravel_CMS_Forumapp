@@ -5,10 +5,16 @@
         <div class="panel-heading">
             <img src="{{asset($d->user->avatar)}}" alt="{{asset($d->user->avatar)}}" width="40px" height="40px">&nbsp;&nbsp;&nbsp;
             <span>{{$d->user->name}},<b>({{ $d->user->points}})</b></span>
-            @if($d->is_being_watched_by_auth_user())
-                <a href="{{route('discussion.unwatch',['id' => $d->id])}}" class="btn btn-default btn-xs pull-right">UnWatch</a>
+            
+            @if($d->hasBestAnswer())
+                <span class="btn btn pull-right btn-success btn-xs">closed</span>
             @else
-                <a href="{{route('discussion.watch',['id' => $d->id])}}" class="btn btn-default btn-xs pull-right">Watch</a>
+                <span class="btn btn pull-right btn-danger btn-xs">open</span>
+            @endif
+            @if($d->is_being_watched_by_auth_user())
+                <a href="{{route('discussion.unwatch',['id' => $d->id])}}" class="btn btn-default btn-xs pull-right" style="margin-right: 8px;">UnWatch</a>
+            @else
+                <a href="{{route('discussion.watch',['id' => $d->id])}}" class="btn btn-default btn-xs pull-right" style="margin-right: 8px;">Watch</a>
             @endif
         </div>
         <div class="panel-body">
