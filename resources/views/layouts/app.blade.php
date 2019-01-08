@@ -111,8 +111,15 @@
                                     <li class="list-group-item">
                                             <a href="/channels" >All channels</a>
                                     </li>
-                                </ul>
+                                
+                            
+                            
+                                        <li class="list-group-item">
+                                                <a href="/channels/create" >Create Channels</a>
+                                        </li>
+                                    </ul>
                             </div>
+                            
                         @endif
                     @endif
                 </div>
