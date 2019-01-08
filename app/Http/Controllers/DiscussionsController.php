@@ -49,6 +49,8 @@ class DiscussionsController extends Controller
             'discussion_id' => $id,
             'content' => request()->reply
         ]);
+        $reply->user->points += 25;
+        $reply->user->save();
         $watchers = array();
         foreach($d->watchers as $watcher):
             array_push($watchers,User::find($watcher->user_id));
