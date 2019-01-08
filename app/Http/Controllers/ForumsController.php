@@ -13,7 +13,7 @@ class ForumsController extends Controller
     {
         switch (request('filter')) {
             case 'me':
-                $results = Discussion::where('user_id',Auth::id())->paginate(3);
+                $results = Discussion::where('user_id',Auth::id())->paginate(20);
                 break;
             case 'solved':
                 $answered = array();
@@ -24,7 +24,7 @@ class ForumsController extends Controller
                         array_Push($answered,$d);
                     }
                 }
-                $results = new Paginator($answered,3);
+                $results = new Paginator($answered,20);
                 break;
             case 'unsolved':
                 $unanswered = array();
@@ -35,7 +35,7 @@ class ForumsController extends Controller
                         array_Push($unanswered,$d);
                     }
                 }
-                $results = new Paginator($unanswered,3);
+                $results = new Paginator($unanswered,20);
                 break;
             default:
                 $results = Discussion::orderBy('created_at','desc')->paginate(3);
