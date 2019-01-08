@@ -104,6 +104,17 @@
                             </li>
                         </ul>
                     </div>
+                    @if(Auth::check())
+                        @if(Auth::user()->admin)
+                            <div class="panel-body">
+                                <ul class="list-group">
+                                    <li class="list-group-item">
+                                            <a href="/channels" >All channels</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        @endif
+                    @endif
                 </div>
                 <div class="panel panel-default">
                     <div class="panel-heading">
