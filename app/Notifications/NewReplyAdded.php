@@ -44,7 +44,7 @@ class NewReplyAdded extends Notification
                     ->greeting('Hello from Prakash Jha')
                     ->line('New reply left on a discussion you are watching')
                     ->action('view Discussion', route('discussion',['slug' => $this->discussion->slug]))
-                    ->line('Thank you for using thisforum application!');
+                    ->line('Thank you for using thisForum application!');
     }
 
   
