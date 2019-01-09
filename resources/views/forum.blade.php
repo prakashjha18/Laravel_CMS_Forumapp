@@ -16,15 +16,15 @@
             </div>
             <div class="panel-body">
                 <h4 class="text-center">
-                    <b>{{$d->title}}</b>
+                    <b>{!!$d->title!!}</b>
                 </h4>
                 <p class="text-center">
-                    {{str_limit($d->content,50)}}
+                    {!!str_limit($d->content,50)!!}
                 </p>
             </div>
             <div class="panel-footer">
                 <span>
-                    {{$d->replies->count()}} Replies
+                    {!!$d->replies->count()!!} Replies
                 </span>
                 <a href="{{route('channel',['slug' => $d->channel->slug])}}"class="pull-right btn btn-default btn-xs">{{$d->channel->title}}</a>
             </div>

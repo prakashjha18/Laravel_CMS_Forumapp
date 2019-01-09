@@ -27,7 +27,7 @@ class RepliesTableSeeder extends Seeder
             'content' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto minus, laboriosam consequuntur ex aut dignissimos? Est qui nulla laboriosam deserunt ea non dicta sunt. Nemo ducimus nesciunt sint repellat officia.'
         ];
         $r4 = [
-            'user_id' => 4,
+            'user_id' => 2,
             'discussion_id' => 4,
             'content' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto minus, laboriosam consequuntur ex aut dignissimos? Est qui nulla laboriosam deserunt ea non dicta sunt. Nemo ducimus nesciunt sint repellat officia.'
         ];

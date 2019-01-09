@@ -30,8 +30,8 @@
             @if($d->featured != '')
             <img src="{{asset("$d->featured")}}" width="400px" height="400px"><hr>
             @endif
-            <p class="text-center">
-                {{$d->content}}
+            <p>
+                {!!$d->content!!}
             </p>
             <hr>
             @if($best_answer)
@@ -75,7 +75,7 @@
         </div>
         <div class="panel-body">
             <p class="text-center">
-                {{$r->content}}
+                {!!$r->content!!}
             </p>
             <hr>
         </div>
