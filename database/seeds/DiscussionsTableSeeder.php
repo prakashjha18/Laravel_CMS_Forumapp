@@ -10,10 +10,10 @@ class DiscussionsTableSeeder extends Seeder
      */
     public function run()
     {   
-        $t1 = 'Implementing OAUTH2 with laravel passport';
-        $t2 = 'Pagination in vuejs not working correctly';
-        $t3 = 'Vuejs event listeners for child components';
-        $t4 = 'Laravel homestead error - undetected database';
+        $t1 = 'how detect whether a probablity distrubution is normal or poison';
+        $t2 = 'Adaptiv huffman compression';
+        $t3 = 'Concepts of Multicasting';
+        $t4 = 'problem on solving Chomskey hierarchy';
         $d1 = [
             'title' => $t1,
             'content' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi cupiditate dignissimos repellat ut consectetur corrupti beatae sed blanditiis, delectus odit, sequi possimus suscipit voluptate. Tempore dolorum inventore dolore repudiandae iste.',

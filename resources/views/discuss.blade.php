@@ -6,7 +6,7 @@
                      Create a new discussion
                 </div>
                 <div class="panel-body">
-                    <form action="{{route('discussions.store')}}" method="post">
+                    <form action="{{route('discussions.store')}}" method="post" enctype="multipart/form-data">
                         {{csrf_field()}}
                         <div class="form-group">
                             <label for="title">Title</label>
@@ -19,6 +19,10 @@
                                     <option value="{{$channel->id}}">{{$channel->title}}</option>
                                 @endforeach
                             </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="featured">featured image (*optional)</label>
+                            <input type="file" name="featured" class="form-control">
                         </div>
                         <div class="form-group">
                             <label for="content">Ask a question</label>

@@ -97,10 +97,10 @@
                                 <a href="/forum?filter=me">My discussion</a>
                             </li>
                             <li class="list-group-item">
-                                <a href="/forum?filter=solved">Answered discussion</a>
+                                <a href="/forum?filter=solved">Solved discussion</a>
                             </li>
                             <li class="list-group-item">
-                                <a href="/forum?filter=unsolved">UnAnswered discussion</a>
+                                <a href="/forum?filter=unsolved">Unsolved discussion</a>
                             </li>
                         </ul>
                     </div>

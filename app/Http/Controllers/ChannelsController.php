@@ -40,12 +40,13 @@ class ChannelsController extends Controller
     public function store(Request $request)
     {
         $this->validate($request,[
-            'channel' => 'required',
-            'slug' =>str_slug($request->channel)
+            'channel' => 'required'
+            
         ]);
 
         Channel::create([
-            'title' => $request->channel
+            'title' => $request->channel,
+            'slug' =>str_slug($request->channel)
         ]);
 
         Session::flash('success','Channel created.');

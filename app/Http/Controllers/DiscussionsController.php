@@ -22,15 +22,35 @@ class DiscussionsController extends Controller
         $this->validate($r,[
             'channel_id' => 'required',
             'content' => 'required',
-            'title' => 'required'
+            'title' => 'required',
+            'featured' => 'image'
         ]);
+        if(request()->hasFile('featured'))
+        {
+        $featured = request()->featured;
+        $featured_new_name = time().$featured->getClientOriginalName();
+        $featured->move('uploads/posts', $featured_new_name);
+        
         $discussion = Discussion::create([
             'title' => $r->title,
             'content' => $r->content,
             'channel_id' => $r->channel_id,
             'user_id' => Auth::id(),
-            'slug' => str_slug($r->title)
+            'slug' => str_slug($r->title),
+            'featured' => 'uploads/posts/' . $featured_new_name
         ]);
+        }
+        else{
+            $discussion = Discussion::create([
+                'title' => $r->title,
+                'content' => $r->content,
+                'channel_id' => $r->channel_id,
+                'user_id' => Auth::id(),
+                'slug' => str_slug($r->title),
+                
+                
+            ]);
+        }
         Session::flash('success','Discussion Successfully created');
         return redirect()->route('discussion',['slug' => $discussion->slug]);
     }

@@ -32,6 +32,7 @@
                                             {{csrf_field()}}
                                             {{method_field('DELETE')}}
                                             <button class="btn btn-xs btn-danger" type="submit">Destroy</button>
+                                        </form>
                                     </td>
                                 </tr>
                             @endforeach

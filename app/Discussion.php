@@ -4,7 +4,7 @@ use Auth;
 use Illuminate\Database\Eloquent\Model;
 class Discussion extends Model
 {
-    protected $fillable = ['title','content','user_id','channel_id','slug'];
+    protected $fillable = ['title','content','user_id','channel_id','slug','featured'];
     public function channel()
     {
         return $this->belongsTo('App\Channel');

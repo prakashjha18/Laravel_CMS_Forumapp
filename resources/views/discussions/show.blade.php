@@ -27,6 +27,9 @@
                 <b>{{$d->title}}</b>
             </h4>
             <hr>
+            @if($d->featured != '')
+            <img src="{{asset("$d->featured")}}" width="400px" height="400px"><hr>
+            @endif
             <p class="text-center">
                 {{$d->content}}
             </p>
