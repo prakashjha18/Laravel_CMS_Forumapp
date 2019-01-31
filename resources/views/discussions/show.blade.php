@@ -35,7 +35,7 @@
             </p>
             <hr>
             @if($best_answer)
-                <div class="text-center" style="padding: 10px">
+                <div  style="padding: 2px">
                     <h3 class="text-center">Best Answer</h3>
                     <div class="panel panel-success">
                         <div class="panel-heading">
@@ -43,7 +43,7 @@
                             <span>{{$best_answer->user->name}}<b>({{ $best_answer->user->points}})</b></span>
                         </div>
                         <div class="panel-body">
-                            {{$best_answer->content}}
+                            {!!$best_answer->content!!}
                         </div>
                     </div>
                 </div>
